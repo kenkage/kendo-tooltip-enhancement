@@ -16,10 +16,11 @@ import {
       <span>{{ anchor.nativeElement.innerText }}</span>
     </ng-template>
    <div kendoTooltip
+   showOn="hover"
       showOn="click"
-      showOn="hover"
       [tooltipTemplate]="template"
-      filter=".k-grid td">
+      filter=".k-grid td"
+      (mouseover)="showTooltip($event)">
       
 <kendo-grid
         [data]="gridData"
